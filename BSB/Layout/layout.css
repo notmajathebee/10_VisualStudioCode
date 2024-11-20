@@ -1,55 +1,181 @@
-/* Grundlegendes Reset */
 body, ul {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Globale Einstellungen */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #e7e7e7;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    justify-content: flex-start; /* Das Logo bleibt immer links */
+    align-items: center;
+}
+
+/* Logo Bild */
+.logo-container img {
+    height: auto;
+    width: 30px;
+    margin: 5px;
 }
 
 /* Header-Layout */
 header {
-    background-color: #004080; /* Dunkles Blau */
-    color: white;
+    background-color: #ffffff;
+    font-weight: bold;
+    border-radius: 15px;
+
     display: flex;
-    justify-content: space-between; /* Elemente verteilen: Logo links, Navigation rechts */
-    align-items: center; /* Vertikale Zentrierung */
+    justify-content: space-between; /* Sicherstellen, dass zwischen den beiden Containern Platz ist */
+    align-items: center; /* Zentriert die Inhalte vertikal */
     padding: 10px 20px;
 
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 30px; 
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-/* Logo */
-header .logo img {
-    height: 50px;
+/* Container für die Navigation */
+.nav-container {
+    display: flex;
+    justify-content: center; /* Zentriert die Navigation innerhalb des Containers */
+    flex-grow: 1; /* Der Container wächst, um den verfügbaren Platz auszufüllen */
 }
 
 /* Navigation */
 nav ul {
     list-style: none;
-    display: flex; /* Items nebeneinander */
-    gap: 20px; /* Abstand zwischen Links */
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Zentriert die Navigation */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 16px;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffd700; /* Goldgelb beim Hover */
+    color: #252525; /* Farbe beim Hover */
 }
 
+/* Foooter */
+footer {
+    background: #f4f4f4;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Container für den Footer-Inhalt */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Elemente nebeneinander anordnen */
+    gap: 30px; /* Abstand zwischen den Spalten */
+    max-width: 1200px;
+    margin: 0 auto; /* Zentriert den Footer auf der Seite */
+}
+
+.footer-content p {
+    font-weight: bold;
+}
+
+/* Logo im Footer */
+.footer-logo-container {
+    flex: 0 0 auto; /* Das Logo nimmt nur so viel Platz ein, wie es braucht */
+}
+
+.footer-logo {
+    width: 100px; /* Breite des Logos */
+    margin: 1em ;
+}
+
+/* Linke Spalte - Kontaktinformationen */
+.footer-left {
+    flex: 2;
+}
+
+/* Kontakt-Adresse im Footer */
+.footer-left address {
+    font-style: normal;
+    line-height: 1.6;
+}
+
+/* Rechte Spalte - Abteilungen und rechtliche Informationen */
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+    flex: 3;
+    gap: 20px;
+}
+
+/* Abteilungen und Info */
+.footer-departments,
+.footer-info {
+    flex: 1; /* Beide Bereiche nehmen gleich viel Platz ein */
+}
+
+/* Liste der Abteilungen und Info-Links */
+.footer-departments ul,
+.footer-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-departments li,
+.footer-info li {
+    margin-bottom: 8px;
+}
+
+.footer-departments a,
+.footer-info a {
+    text-decoration: none;
+    color: #252525;
+    transition: color 0.3s;
+}
+
+.footer-departments a:hover,
+.footer-info a:hover {
+    color: #ff6600; /* Farbe beim Hover */
+}
+
+/* Unterer Teil des Footers (Copyright) */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #888;
+}
+
+/* Responsive Anpassungen für kleinere Bildschirme */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+    .footer-content {
+        flex-direction: column; /* Bei kleinen Bildschirmen untereinander */
+        align-items: center;
+    }
+
+    .footer-logo-container {
+        margin-bottom: 20px; /* Abstand zwischen Logo und den anderen Spalten */
+    }
+
+    .footer-left, .footer-right {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+
+    .footer-departments,
+    .footer-info {
+        margin-top: 20px;
     }
 }

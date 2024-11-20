@@ -1,44 +1,7 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSB Bretten</title>
-    <link rel="stylesheet" href="layout.css"> <!-- Haupt css für das Layout -->
-    <link rel="stylesheet" href="/BSB/Homepage/style.css"> 
-    <script type=module src=main.js></script>
-</head>
-<body>
-    <header>
-        <!-- Container für das Logo, immer links fixiert -->
-        <div class="logo-container">
-            <img src="/BSB/Pictures/bsb_logo.png" alt="BSB Bretten Logo">
-            <!-- <nav>
-                <ul>
-                    <li><a href="/BSB/Homepage/homepage.html">BSB</a></li>
-                </ul>
-            </nav> -->
-        </div>
-        
-        <!-- Container für die Navigation, immer zentriert -->
-        <div class="nav-container">
-            <nav>
-                <ul>
-                    <li><a href="/BSB/Subsites/platzhalter.html">Unsere Schule</a></li>
-                    <li><a href="/BSB/Subsites/platzhalter.html">Anmeldung</a></li>
-                    <li><a href="/BSB/Subsites/platzhalter.html">Über uns</a></li>
-                    <li><a href="/BSB/Subsites/platzhalter.html">Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <div id="content">
-        </div>
-    </main>
-
-    <footer>
+class BsbFooter extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <footer>
         <div class="footer-content">
             <!-- Logo als eigenes Div -->
             <div class="footer-logo-container">
@@ -84,7 +47,8 @@
             <p>&copy; 2024 BSB Bretten. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
-    
-    
-</body>
-</html>
+        `;
+    }
+}
+
+customElements.define("bsb-footer", BsbFooter);
