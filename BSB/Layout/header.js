@@ -3,7 +3,9 @@ class BsbHeader extends HTMLElement {
         this.innerHTML = `
         <header>
             <div class="logo-container">
+                <a href="/BSB/Homepage/homepage.html"> <!-- Die URL zur Homepage -->
                 <img src="/BSB/Pictures/bsb_logo.png" alt="BSB Bretten Logo">
+                 </a>
             </div>
 
             <div class="nav-container">

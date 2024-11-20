@@ -1,0 +1,79 @@
+section {
+    margin: 80px auto;
+    max-width: 1200px;
+}
+section h1{
+    text-align: center;
+}
+
+
+/* Intro */
+
+.intro-section {
+    position: relative;
+    background-image: url('/BSB/Pictures/bsb_innenhof.jpg'); /* Dein Bild hier einfügen */
+    background-size: cover; /* Bild füllt den gesamten Bereich */
+    background-position: center; /* Bild zentrieren */
+    border-radius: 15px;
+    height: 500px; /* Höhe der Section */
+    color: rgb(0, 0, 0); /* Textfarbe auf weiß setzen, damit der Text sichtbar ist */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Stil für den Text */
+.intro-section h1,
+.intro-section p,
+.intro-section .button {
+    z-index: 1; /* Text bleibt über dem Bild sichtbar */
+    
+    background-color: rgba(255, 255, 255, 0.7); /* Weißer Hintergrund mit leichter Transparenz */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+/* Container für die Abteilungen */
+.departments-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Abstand zwischen den Abteilungen */
+    justify-content: space-between;
+}
+
+/* Jede Abteilung als Block */
+.department {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    width: calc(33.333% - 20px); /* 3 Spalten, mit Abstand */
+    box-sizing: border-box;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.department:hover {
+    transform: scale(1.05); /* Vergrößert das Element leicht */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Fügt einen Schatten hinzu */
+}
+
+/* Abteilungstitel */
+.department h2 {
+    color: #444444;
+}
+
+/* Paragraphen (Inhalte der Abteilungen) */
+.department p {
+    font-size: 14px;
+    color: #26216e;
+}
+
+/* Responsives Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .department {
+        width: 100%; /* Auf kleineren Bildschirmen wird jede Abteilung untereinander angezeigt */
+    }
+}
