@@ -1,0 +1,55 @@
+/* Grundlegendes Reset */
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Globale Einstellungen */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header-Layout */
+header {
+    background-color: #004080; /* Dunkles Blau */
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Elemente verteilen: Logo links, Navigation rechts */
+    align-items: center; /* Vertikale Zentrierung */
+    padding: 10px 20px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+header .logo img {
+    height: 50px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex; /* Items nebeneinander */
+    gap: 20px; /* Abstand zwischen Links */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Goldgelb beim Hover */
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
